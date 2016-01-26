@@ -14,12 +14,28 @@ def reverse(s):
     return s[::-1]
 
 
-def main():
+def swap(list_, i, j):
+    list_[i], list_[j] = list_[j], list_[i]
+
+
+def reversex(s):
+    new_s = list(s)
+    length = len(s)
+    for i in range(len(new_s)//2):
+        swap(new_s, i, length - i - 1)
+
+    return "".join(new_s)
+
+
+def run():
     print reverse("Andela")
     print reverse("Hello")
     print reverse("This is fun.")
+    print reversex("Andela")
+    print reversex("Hello")
+    print reversex("This is fun.")
 
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
-    main()
+    run()
