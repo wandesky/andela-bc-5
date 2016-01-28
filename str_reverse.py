@@ -1,3 +1,6 @@
+import unittest
+
+
 def reverse(s):
     """
     Reverse a string using string slicing.
@@ -35,7 +38,17 @@ def run():
     print reversex("Hello")
     print reversex("This is fun.")
 
+
+class TestReverseX(unittest.TestCase):
+
+    def test_reserveses_hello(self):
+        self.assertEqual(reversex("hello"), "olleh")
+
+    def test_reverse_catherine(self):
+        self.assertEqual(reversex("catherine"), "enirehtac")
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
+    unittest.main()
     run()
