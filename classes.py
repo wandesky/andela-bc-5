@@ -1,5 +1,9 @@
 class Vehicle(object):
+    """
+    A Vehicle object.
 
+    This is the father of all automobiles.
+    """
     def __init__(self, engine_type, **kwargs):
         self.engine_type = engine_type
         for key, value in kwargs.items():
@@ -13,6 +17,8 @@ class Vehicle(object):
 
 
 class Truck(Vehicle):
+
+    """A Truck. Has characteristics specific to trucks."""
 
     doors = 2
 
